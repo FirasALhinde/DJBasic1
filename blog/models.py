@@ -14,7 +14,7 @@ class Post(models.Model):
         return self.title
     class Meta:
         verbose_name = 'My Post'
-        ordering = ['-publish_date']
+        ordering = ['publish_date']
 class Category(models.Model):
     name = models.CharField(max_length=50)
     def __str__(self):
