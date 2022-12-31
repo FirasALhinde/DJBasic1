@@ -1,0 +1,6 @@
+<a href="{% url 'blog:post_list' %}"><h1>Our Blog</h1></a>
+<a href="{% url 'blog:new_post' %}">New Post</a>
+<hr />
+{% for post in all_posts %}
+<a href="{% url 'blog:post_detail' post.id %}"><h3>{{post}}</h3></a>
+{% endfor %}
